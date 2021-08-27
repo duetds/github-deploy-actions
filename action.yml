@@ -1,7 +1,7 @@
 name: 'Github Build & Deploy Action'
 description:
     'This action will auto deploy to target branch when it get triggered'
-author: 'jeoy <jeoy_z@126.com>'
+author: 'DuetDS <duetdesignsystem@lahitapiola.fi'
 runs:
     using: 'docker'
     image: 'Dockerfile'
