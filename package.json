@@ -1,12 +1,15 @@
 {
-  "name": "github-deploy-actions",
-  "version": "0.1.0",
+  "name": "@duetds/github-deploy-actions",
+  "version": "2.5.0",
   "private": true,
-  "dependencies": {
+  "description": "This package contains Duet Design System github actions.",
+  "bugs": {
+    "email": "duetdesignsystem@lahitapiola.fi"
   },
-  "scripts": {
-    "start": "",
-    "build": "",
-    "test": ""
-  },
+  "license": "UNLICENSED",
+  "author": "LocalTapiola Services Ltd <duetdesignsystem@lahitapiola.fi>",
+  "main": "entrypoint.sh",
+  "files": [
+    ".github"
+  ]
 }

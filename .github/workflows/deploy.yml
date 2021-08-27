@@ -1,0 +1,23 @@
+name: deploy
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+    types: [content-change]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Build and Deploy
+        uses: duetds/github-deploy-actions@v2.5.0
+        env:
+          COMMIT_EMAIL: duetdesignsystem@lahitapiola.fi
+          COMMIT_NAME: duetbot
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: main
+          DEPLOY_BRANCH: gh-pages
+          BUILD_SCRIPT: npm install && DUET_PROJECT=${{ github.repository }} DUET_PROJECT_NAME=${{ github.event.repository.name }} DUET_TOKEN=$(echo -n ${{ github.repository }} | md5sum | awk '{print $1 $1}') npm run build:prototype
+          FOLDER: dist
