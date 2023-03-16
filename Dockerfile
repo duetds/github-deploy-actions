@@ -1,4 +1,4 @@
-FROM node:14.17.1
+FROM node:lts
 
 LABEL "com.github.actions.name"="Github Build & Deploy Action"
 LABEL "com.github.actions.description"="This action will auto deploy to target branch when it get triggered"

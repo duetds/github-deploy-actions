@@ -1,6 +1,6 @@
 {
   "name": "@duetds/github-deploy-actions",
-  "version": "2.5.0",
+  "version": "3.0.0",
   "private": true,
   "description": "This package contains Duet Design System github actions.",
   "bugs": {
