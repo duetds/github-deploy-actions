@@ -7,11 +7,10 @@ on:
     types: [content-change]
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - run: git config --global --add safe.directory /github/workspace
       - name: Build and Deploy
         uses: duetds/github-deploy-actions@v3.0.0
         env:
