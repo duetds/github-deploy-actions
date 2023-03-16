@@ -1,7 +1,6 @@
 FROM node:lts
 
-RUN apt-mark hold git
-RUN apt-mark hold git-man
+RUN git config --system --add safe.directory *
 
 LABEL "com.github.actions.name"="Github Build & Deploy Action"
 LABEL "com.github.actions.description"="This action will auto deploy to target branch when it get triggered"
