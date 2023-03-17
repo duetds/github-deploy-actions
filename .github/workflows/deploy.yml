@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Build and Deploy
-        uses: duetds/github-deploy-actions@3.0.0
+        uses: duetds/github-deploy-actions@v3.0.0
         env:
           COMMIT_EMAIL: duetdesignsystem@lahitapiola.fi
           COMMIT_NAME: duetbot
