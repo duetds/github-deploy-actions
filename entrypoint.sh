@@ -36,6 +36,7 @@ cd $GITHUB_WORKSPACE && \
 git init && \
 git config --global user.email "${COMMIT_EMAIL}" && \
 git config --global user.name "${COMMIT_NAME}" && \
+git config --global --add safe.directory /github/workspace && \
 
 
 REPOSITORY_PATH="https://${ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
